@@ -1,0 +1,110 @@
+﻿<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="simpatici effetti di transition/transform">
+		<meta name="author" content="Mattia">
+        <link href="bootstrap-4.5.2-dist/css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div class="cubo" id="cubo"></div>
+        <div class="row" id="buttons">
+            <button id="btnGenera" class="btn btn-outline-primary col-6">generates displacement</button>
+            <button id="btnTimer" class="btn btn-outline-danger col-6">stop generation</button>
+        </div>
+        <section>
+			<button id="btnMenu" class="btn btn-dark">Menu</button><button id="btnGitHub" class="btn btn-dark">see code on GitHub</button>
+		</section>
+        
+        <!--menu impostazioni-->
+        <div id="menu" class="disp-no menu">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switchBottoneGenera"  checked="checked" onchange="MostraBottoneGenera()">
+                <label class="custom-control-label" for="switchBottoneGenera">shows the button to generate a position in the home</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switchInterrompiGenerazione"  checked="checked" onchange="MostraBottoneInterrompi()">
+                <label class="custom-control-label" for="switchInterrompiGenerazione">shows the button to generate a position in the home</label>
+            </div>
+            <hr>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switchCambiaForma" checked="checked" onchange="CambiaForma()">
+                <label class="custom-control-label" for="switchCambiaForma">change the shape of the object randomly</label>
+            </div>
+			<div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Minimum value</span>
+                </div>
+                <input type="number" class="form-control" placeholder="10" id="txtValMin" value="10">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">px</span>
+                </div>
+            </div>
+			<div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">maximum value</span>
+                </div>
+                <input type="number" class="form-control" placeholder="700" id="txtValMax" value="700">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">px</span>
+                </div>
+            </div>
+			<button class="btn btn-success" id="btnVal">apply</button>
+            <hr />
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">width of the figure</span>
+                </div>
+                <input type="number" class="form-control" placeholder="200" id="larghezza" value="200">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">px</span>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">height of the figure</span>
+                </div>
+                <input type="number" class="form-control" placeholder="200" id="altezza" value="200">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">px</span>
+                </div>
+            </div>
+
+            <button class="btn btn-success" id="btnSalvaDimensioni">apply</button>
+
+            <hr>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">shape generation interval</span>
+                </div>
+                <input type="number" class="form-control" placeholder="500" id="txtTimer" value="500">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">ms</span>
+                </div>
+            </div>
+            <button class="btn btn-success" id="btnSalvaTimer">apply</button>
+
+            <hr />
+
+            <div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">object color #</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="valori esadecimale" id="txtColore" value="00ff00">
+                </div>
+                <button class="btn btn-success" id="btnColore">apply</button>
+            </div>
+
+        </div>
+
+
+        <script src="bootstrap-4.5.2-dist/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

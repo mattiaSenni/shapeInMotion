@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+
+body{
+    background-color: lightblue;
+}
+
+
+#btnMenu{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+#btnGitHub{
+	position: fixed;
+	top: 20px;
+	left: 100px;
+}
+
+.menu {
+    width: 420px;
+    height: 100%;
+    overflow: scroll;
+    background-color: white;
+    transform-origin: all 0.3s ease;
+    position: fixed;
+    top: 60px;
+    left: 0px;
+}
+
+#buttons{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.cubo{
+    width: 200px;
+    height: 200px;
+    background-color:green;
+    transition: all 0.5s ease;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+.a0{
+    transform: scale(2);
+}
+.a1{
+    transform: translate(-124px, 125px);
+}
+.a2 {
+    transform: translate(24px, -25px);
+}
+.a3 {
+    transform: translate(25px, 0px);
+}
+.a4 {
+    transform: translate(0px, 25px);
+}
+.a5 {
+    transform: translate(-25px, 0px);
+}
+
+.a7 {
+    transform: scale(0.5);
+}
+.a8 {
+    transform: scale(3);
+}
+.a9 {
+    transform: translate(0px, -125px);
+}
+.a10 {
+    transform: translate(124px, -25px);
+}
+.a11 {
+    transform: translate(300px, -25px);
+}
+.a12 {
+    transform: translate(-214px, 0px);
+}
+.a13 {
+    transform: translate(120px, 120px);
+}
+.a14 {
+    transform: rotate(99deg);
+}
+.a15 {
+    transform: rotate(-185deg);
+}
+.a16 {
+    transform: rotate(125deg);
+}
+
+.a17 {
+    transform: rotate(-180deg);
+}
+
+
+
+.disp-no{
+    display: none;
+}
+
+.disp-block{
+    display: block;
+}
