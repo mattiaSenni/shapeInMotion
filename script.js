@@ -52,8 +52,8 @@ document.getElementById("btnColore").addEventListener("click", event => {
     document.getElementById(nome).style.backgroundColor= colore
 })
 
-document.getElementById("btnGitHub").addEventListener("click", event=> {
-    alert("The repository on GitHub will be available soon");
+document.getElementById("btnGitHub").addEventListener("click", event => {
+    open("https://github.com/mattiaSenni/shapeInMotion");
 })
 
 function Interval1() {
