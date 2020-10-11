@@ -21,8 +21,14 @@ document.getElementById("btnTimer").addEventListener("click", event => {
 })
 
 document.getElementById("btnMenu").addEventListener("click", event=>{
-    document.getElementById("menu").classList.toggle("disp-no");
-    document.getElementById("menu").classList.toggle("disp-block");
+    if(window.innerWidth > 576){
+        document.getElementById("menu").classList.toggle("disp-no-menu");
+        document.getElementById("menu").classList.toggle("disp-block-menu");
+    }
+    else{
+        document.getElementById("menu").classList.toggle("disp-no-menu-min");
+    document.getElementById("menu").classList.toggle("disp-block-menu-min");
+    }
 })
 
 document.getElementById("btnSalvaDimensioni").addEventListener("click", event =>{
