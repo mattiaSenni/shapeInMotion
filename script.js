@@ -1,4 +1,10 @@
 console.clear();
+if (window.innerWidth > 576) {
+    document.getElementById("menu").classList.add("disp-no-menu");
+}
+else {
+    document.getElementById("menu").classList.add("disp-no-menu-min");
+}
 var numeroClassi = 18;
 var nome = "cubo";
 var cambia = true;
